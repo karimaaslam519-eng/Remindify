@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title><title>Remindify Dashboard</title></title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>Remindify</h2>
+
+        <ul>
+            <li>🏠 Dashboard</li>
+            <li>📅 Schedule</li>
+            <li>🚗 Vehicle</li>
+            <li>💳 Bills</li>
+            <li>🛡 Insurance</li>
+            <li>⚙️ Settings</li>
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="container">
+
+        <!-- Navbar -->
+
+        <nav>
+
+            <h2>FixMate</h2>
+
+            <div class="profile">
+                🔔 👤
+            </div>
+
+        </nav>
+
+        <!-- Welcome Card -->
+
+        <div class="welcome-card">
+
+            <h1>Welcome Back</h1>
+
+            <p>
+                Manage all your reminders in one place.
+            </p>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>Total</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="categories">
+
+            <div class="category-card">
+                🚗
+                <h3>Vehicle</h3>
+            </div>
+
+            <div class="category-card">
+                💳
+                <h3>Bills</h3>
+            </div>
+
+            <div class="category-card">
+                🛡
+                <h3>Insurance</h3>
+            </div>
+
+            <div class="category-card">
+                🏠
+                <h3>Home</h3>
+            </div>
+
+        </div>
+
+        <!-- Progress Chart -->
+
+        <div class="chart-card">
+
+            <h2>Progress Overview</h2>
+
+            <canvas id="progressChart"></canvas>
+
+        </div>
+
+        <!-- Schedule -->
+
+        <div class="schedule-card">
+
+            <h2>Today's Schedule</h2>
+
+            <div class="schedule-item">
+                🚗 Vehicle Service
+            </div>
+
+            <div class="schedule-item">
+                💡 Electricity Bill
+            </div>
+
+            <div class="schedule-item">
+                🛡 Insurance Renewal
+            </div>
+
+        </div>
+
+        <!-- Add Reminder -->
+
+        <div class="task-section">
+
+            <h2>Add Reminder</h2>
+
+            <input
+            type="text"
+            id="taskName"
+            placeholder="Reminder Name">
+
+            <input
+            type="date"
+            id="taskDate">
+
+            <button onclick="addTask()">
+                Add Reminder
+            </button>
+
+            <h3 style="margin-top:20px;">
+                Your Reminders
+            </h3>
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+        <!-- Activity Log -->
+
+        <div class="activity-card">
+
+            <h2>Recent Activity</h2>
+
+            <ul id="activityList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
